@@ -257,4 +257,9 @@ Current Gesture: sitting_nodding_up_down
 ## 6. 3D printing:
 - Designing and 3D printing a structure that holds the sensor universally for all helmets.
 
+## 7. Deployment and testing
+- Deploying the app and testing the helmet for many bikers
+
+
+
 
