@@ -19,4 +19,5 @@
 ### Steps to set up the ESP32 device with circuit python:
 **ESP32 Device:**  
 <img src="https://circuitpython.org/assets/images/boards/large/espressif_esp32s3_devkitc_1.jpg" alt="ESP32-S3-DevKitC-1-N32R8" width="300" />
-
+**IMU (MPU6050):**
+<img src="https://store.flytron.com/cdn/shop/products/986_580x.jpg?v=1581362322" alt="IMU" width="300" />
