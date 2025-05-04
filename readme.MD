@@ -212,3 +212,7 @@ Current Gesture: sitting_nodding_up_down
 - random_forest_classifier is just another experimental machine learning file and we don't think it's accurate
 - Bluetooth collection is to collect data using Bluetooth and this was not very reliable
 - Bluetooth devices is a code to find Bluetooth devices around your device but it couldn't find the microcontroller
+
+### Results and Conclusion:
+- Confusion Matrix for SVM model:
+  
