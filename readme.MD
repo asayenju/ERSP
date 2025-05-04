@@ -143,7 +143,7 @@ pip install -r requirements.txt
 - Accuracy:
   - accuracy_score(y_test, y_pred) → Reports test accuracy (e.g., 95.00%).
 - Classification Report:
-  - Shows precision, recall, F1-score for each gesture class.
+  - Shows precision, recall, and F1-score for each gesture class.
 - Confusion Matrix:
   - Visualizes true vs. predicted labels (heatmap).
 
@@ -175,14 +175,14 @@ pip install -r requirements.txt
 - Initialize:
   - Open serial connection.
   - Load SVM model.
-  - Set up circular buffer (deque) for sensor data.
+  - Set up a circular buffer (deque) for sensor data.
 - Read Data:
   - Continuously reads and cleans serial data (handles errors/noise).
 - Feature Extraction:
   - When buffer reaches WINDOW_SIZE, computes features (mean/std per axis).
 - Prediction:
   - SVM predicts gesture (e.g., sitting_still, nodding_up_down).
-  - Prints result in real-time.
+  - Prints results in real-time.
 
 4. Gesture Labels
 - Maps predicted class indices to human-readable labels:
@@ -237,4 +237,24 @@ Current Gesture: sitting_nodding_up_down
 ### Future Works:
 ## 1. Machine Learning for Actual Fatigue Classification:
 - Collect Data for different types of motion while cycling normally
-- Collect 
+- Collect Data for different types of motion while cycling in a stationary bike with eyes closed
+- Use SVM, Random CLassifier, and KNN for the best and fastest predictions as we compare between these different models
+- Do real-time prediction
+
+## 2. Bluetooth Integration:
+- Using BLE, learn how to implement Bluetooth properly by watching YouTube videos or reading through documentation thoroughly
+- Alternatively, switch to programming in C or Espressif and learn how to use Bluetooth to get the data
+
+## 3. Renewable Energy Integration:
+- Using solar panels to power up the sensor or other types of renewable energy
+
+## 4. Real-time testing:
+- testing it if it detects fatigue or not
+
+## 5. Mobile app:
+- Developing an app or software that sends push notifications if the data sent to the device detects fatigue.
+
+## 6. 3D printing:
+- Designing and 3D printing a structure that holds the sensor universally for all helmets.
+
+
