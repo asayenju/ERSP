@@ -156,7 +156,7 @@ pip install -r requirements.txt
   - Trained KNN model (knn_model.pk1).
   - Fitted scaler (knn_scaler.pk1) → Must be reused during inference.
 
-## real_time.py:
+## real_time.py (SVM Model only):
 1. Purpose:
 - Real-time gesture recognition using a trained SVM model on streaming accelerometer/gyroscope data from a serial port (e.g., Arduino/IMU sensor).
 
@@ -206,3 +206,9 @@ pip install -r requirements.txt
 Current Gesture: sitting_nodding_up_down
 ```
 
+## other python files:
+- Raw scores help show the data in line graphs
+- Spectrogram helps show the data in terms of different frequencies
+- random_forest_classifier is just another experimental machine learning file and we don't think it's accurate
+- Bluetooth collection is to collect data using Bluetooth and this was not very reliable
+- Bluetooth devices is a code to find Bluetooth devices around your device but it couldn't find the microcontroller
