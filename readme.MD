@@ -31,5 +31,12 @@
 ## Step 1:
 1. First, connect the four wires in the IMU and plug them into these pins: UCC, GND, SCL, and SDA. Make sure you don't tangle them.
 2. Now the other end of the wires needs to be connected to the microcontroller in this corresponding manner: UCC-3V (last pin), GND-G, SCL-0, SDA-1
-3. Plug the separate wire containing the USB micro-c to the USB of the microcontroller and the USB type A into your laptop (before doing that make sure that the pins are plugged in the correct order)
-4. Go to https://circuitpython.org/board/espressif_esp32s3_devkitc_1_n32r8/
+
+## Step 2:
+1. Plug the separate wire containing the USB micro-c to the USB of the microcontroller and the USB type A into your laptop (before doing that make sure that the pins are plugged in the correct order)
+2. Go to https://circuitpython.org/board/espressif_esp32s3_devkitc_1_n32r8/ and open the installer to install full circuit python
+3. Follow the instructions also you might need to press the boot two times during this process to find Drive D and you might want to do this multiple times or just unplug the device and plug it back in
+4. Installation is probably the hardest part so make sure to do it multiple times
+
+## Step 3:
+1. paste the code from 
