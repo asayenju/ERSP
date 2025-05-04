@@ -16,6 +16,6 @@
 
 ## Methods and Methodology:
 - We used a ESP32-S3-DevKitC-1-N32R8 device as our microcontroller and connected it to an imu that tracks acceleration and gyroscope
-
+![Esp32-s3 sensor](https://circuitpython.org/assets/images/boards/large/espressif_esp32s3_devkitc_1.jpg)
 ### Steps to set up the ESP32 device with circuit python:
 - 
