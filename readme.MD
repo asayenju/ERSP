@@ -155,3 +155,54 @@ pip install -r requirements.txt
 - joblib.dump() saves:
   - Trained KNN model (knn_model.pk1).
   - Fitted scaler (knn_scaler.pk1) → Must be reused during inference.
+
+## real_time.py:
+1. Purpose:
+- Real-time gesture recognition using a trained SVM model on streaming accelerometer/gyroscope data from a serial port (e.g., Arduino/IMU sensor).
+
+2. Key Components:
+- Serial Communication:
+  - Reads data from COM17 at 115200 baud rate.
+  - Parses comma-separated values (6 columns: 3 accelerometer + 3 gyroscope axes).
+- Data Processing:
+  - Sliding Window: Buffers 100 samples (WINDOW_SIZE) for feature extraction.
+  - Feature Extraction: Computes mean/std for each axis (12 features total) to match training format. 
+- Model Inference:
+  - Loads a pre-trained SVM model (svm_model.pk1).
+  - Predicts gestures every 0.5 seconds (PREDICTION_INTERVAL).
+
+3. Workflow
+- Initialize:
+  - Open serial connection.
+  - Load SVM model.
+  - Set up circular buffer (deque) for sensor data.
+- Read Data:
+  - Continuously reads and cleans serial data (handles errors/noise).
+- Feature Extraction:
+  - When buffer reaches WINDOW_SIZE, computes features (mean/std per axis).
+- Prediction:
+  - SVM predicts gesture (e.g., sitting_still, nodding_up_down).
+  - Prints result in real-time.
+
+4. Gesture Labels
+- Maps predicted class indices to human-readable labels:
+```
+['sitting_still', 'sitting_nodding_up_down', 
+ 'sitting_nodding_side_to_side', 'sitting_nodding_diagonal']
+```
+
+5. Error Handling:
+- Serial Errors: Skips malformed data.
+- KeyboardInterrupt: Gracefully stops on Ctrl+C.
+
+6. Critical settings:
+- WINDOW_SIZE=100: Balances latency and accuracy.
+- PREDICTION_INTERVAL=0.5: Controls prediction frequency.
+- Baud Rate: Must match sender device (e.g., ESP32).
+
+7. Output:
+- Prints predicted gesture in real-time:
+```
+Current Gesture: sitting_nodding_up_down
+```
+
