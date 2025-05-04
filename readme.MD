@@ -29,6 +29,5 @@
 </div>
 
 ## Step 1:
-- First, connect the four wires in the IMU and plug them into these pins: UCC, GND, SCL, and SDA. Make sure you don't tangle them.
-- Now the other end of the wires connect it this way:
-    - 
+1. First, connect the four wires in the IMU and plug them into these pins: UCC, GND, SCL, and SDA. Make sure you don't tangle them.
+2. Now the other end of the wires need to be connected to the microcontroller in this corresponding manner: UCC-3V (last pin), GND-G, SCL-0, SDA-1
