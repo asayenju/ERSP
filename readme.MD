@@ -67,7 +67,21 @@ pip install -r requirements.txt
 - Collect data from the specific serial number as you can modify the code by going to device managers to check which port the microcontroller is connected to.
 - Baud rate is the speed at which data is transmitted over serial communication, and we set it to 9600, which is common for basic projects but can become higher depending on the microcontroller.
 - This code write the transmitted data into text files starting from file 1 to as many file as you want and you can modify this in the while loop.
-- It will collect data for 10 seconds and during those 10 seconds, it will read from the serial port collect the data and write it in file.
+- It will collect data for 10 seconds and during those 10 seconds, it will read from the serial port collect the data and write it in the file.
+- You can modify the print statement in the end to write how many files of data you collected.
+
+## truncate.py:
+- Since machine learning requires the text files to be of the same number of lines, we truncated every file to 600 lines.
+
+## rename_file.py:
+- Some of our text files had different names, so this code is mainly to rename it to a consistent file name.
+
+##svm.py:
+1. Data Loading & Feature Extraction:
+- load_and_extract_features(file_path):
+  - Reads a .txt file containing sensor data (accelerometer + gyroscope).
+  - Extracts mean & standard deviation for each axis (accel_x, accel_y, accel_z, gyro_x, gyro_y, gyro_z).
+  - Returns a 12-dimensional feature vector per file.
 
 
 
