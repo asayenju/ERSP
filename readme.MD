@@ -113,3 +113,45 @@ pip install -r requirements.txt
 - Displays confusion matrix (plt.show()).
 - Helps assess model performance on different gestures.
 
+## knn.py:
+1. Data Loading & Feature Extraction:
+- load_and_extract_features(file_path):
+  - Reads .txt files containing accelerometer (x,y,z) and gyroscope (x,y,z) data.
+  - Extracts mean and standard deviation for each axis → 12 features per file.
+- prepare_dataset(data_dir):
+  - Organizes data into 4 classes:
+    - sitting_still (Label 0)
+    - sitting_nodding_up_down (Label 1)
+    - sitting_nodding_side_to_side (Label 2)
+    - sitting_nodding_diagonal (Label 3)
+  - Splits data into 70% training, 30% testing per class.
+
+2. Preprocessing (Critical for KNN)
+- StandardScaler normalizes features:
+  - Ensures all features contribute equally to distance calculations.
+  - Fit on X_train, then transform X_train and X_test.
+
+4. KNN Model Training
+- Hyperparameters:
+  - n_neighbors=5: Classifies based on 5 closest data points.
+  - weights='distance': Closer neighbors have more influence.
+  - metric='euclidean': Uses Euclidean distance for proximity.
+- Training:
+  - knn_model.fit(X_train_scaled, y_train) → Trains on scaled data.
+
+5. Model Evaluation
+- Accuracy:
+  - accuracy_score(y_test, y_pred) → Reports test accuracy (e.g., 95.00%).
+- Classification Report:
+  - Shows precision, recall, F1-score for each gesture class.
+- Confusion Matrix:
+  - Visualizes true vs. predicted labels (heatmap).
+
+6. Optional: Finding Optimal k
+- Tests k values from 1 to 14 and plots accuracy trends.
+- Helps identify the best n_neighbors for the dataset.
+
+7. Model & Scaler Saving
+- joblib.dump() saves:
+  - Trained KNN model (knn_model.pk1).
+  - Fitted scaler (knn_scaler.pk1) → Must be reused during inference.
