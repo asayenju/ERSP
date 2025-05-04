@@ -28,4 +28,4 @@
   </div>
 </div>
 
-1. Firstly
+## Step 1:
