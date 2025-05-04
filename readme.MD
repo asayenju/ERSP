@@ -215,4 +215,8 @@ Current Gesture: sitting_nodding_up_down
 
 ### Results and Conclusion:
 - Confusion Matrix for SVM model:
-  
+  <div align="center" style="margin: 20px 0;">
+  <div>
+    <img src="svm_confusion matrix.png" alt="Gesture Data Visualization" width="400"/>
+  </div>
+</div>
