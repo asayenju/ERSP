@@ -52,4 +52,12 @@
 5. You can see huge lines of acceleration and gyroscope data (different dimensions) in the form of ax, ay, az, gx, gy, gz
 6. Play around with the imu to see if the data changes if you move the device in different motions
 
-
+### Steps for data collection and machine learning model
+1. clone repository:
+```
+git clone https://github.com/asayenju/ERSP.git
+```
+2. Install all requirements
+```
+pip install -r requirements.txt
+```
