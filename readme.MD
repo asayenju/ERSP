@@ -27,3 +27,5 @@
     <img src="https://store.flytron.com/cdn/shop/products/986_580x.jpg?v=1581362322" alt="MPU6050 Sensor" width="250"/>
   </div>
 </div>
+
+1. Firstly
