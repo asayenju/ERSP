@@ -76,12 +76,21 @@ pip install -r requirements.txt
 ## rename_file.py:
 - Some of our text files had different names, so this code is mainly to rename it to a consistent file name.
 
-##svm.py:
+## svm.py:
 1. Data Loading & Feature Extraction:
 - load_and_extract_features(file_path):
   - Reads a .txt file containing sensor data (accelerometer + gyroscope).
   - Extracts mean & standard deviation for each axis (accel_x, accel_y, accel_z, gyro_x, gyro_y, gyro_z).
   - Returns a 12-dimensional feature vector per file.
+
+- prepare_dataset(data_dir):
+    - Organizes data into 4 gesture classes:
+        - sitting_still (Label 0)
+        - sitting_nodding_up_down (Label 1)
+        - sitting_nodding_side_to_side (Label 2)
+        - sitting_nodding_diagonal (Label 3)
+    - Splits data into 70% training & 30% testing per class.
+    - Returns X_train, X_test, y_train, y_test.
 
 
 
