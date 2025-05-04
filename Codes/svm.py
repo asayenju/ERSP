@@ -86,15 +86,6 @@ print(np.unique(y_train, return_counts=True))
 print("\nTest set:")
 print(np.unique(y_test, return_counts=True))
 
-# Visualize distribution
-plt.figure(figsize=(10, 4))
-plt.subplot(1, 2, 1)
-plt.hist(y_train, bins=4, edgecolor='black')
-plt.title("Training Set Class Distribution")
-plt.subplot(1, 2, 2)
-plt.hist(y_test, bins=4, edgecolor='black')
-plt.title("Test Set Class Distribution")
-plt.show()
 
 # Check basic statistics of your features
 print("\n=== Feature Statistics ===")
@@ -103,11 +94,7 @@ print(np.mean(X_train, axis=0))
 print("\nFeature standard deviations:")
 print(np.std(X_train, axis=0))
 
-# Check for NaN/infinite values
-print("\nNaN values in training set:", np.isnan(X_train).sum())
-print("Infinite values in training set:", np.isinf(X_train).sum())
 
-from sklearn.model_selection import learning_curve
 
 
 # Train SVM model
@@ -119,19 +106,6 @@ with open('model.pkl', 'wb') as file:
 y_pred = model.predict(X_test)
 
 
-# Plot learning curves
-train_sizes, train_scores, test_scores = learning_curve(
-    model, X_train, y_train, cv=5, n_jobs=-1,
-    train_sizes=np.linspace(0.1, 1.0, 5))
-
-plt.figure(figsize=(10, 6))
-plt.plot(train_sizes, np.mean(train_scores, axis=1), label='Training score')
-plt.plot(train_sizes, np.mean(test_scores, axis=1), label='Cross-validation score')
-plt.xlabel("Training examples")
-plt.ylabel("Accuracy")
-plt.legend()
-plt.title("Learning Curves")
-plt.show()
 
 # Accuracy
 accuracy = accuracy_score(y_test, y_pred)
