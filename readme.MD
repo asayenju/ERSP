@@ -61,3 +61,7 @@ git clone https://github.com/asayenju/ERSP.git
 ```
 pip install -r requirements.txt
 ```
+
+# Explaining what the main important files do
+## Data collection.py:
+- 
