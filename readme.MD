@@ -198,10 +198,10 @@ pip install -r requirements.txt
 6. Critical settings:
 - WINDOW_SIZE=100: Balances latency and accuracy.
 - PREDICTION_INTERVAL=0.5: Controls prediction frequency.
-- Baud Rate: Must match sender device (e.g., ESP32).
+- Baud Rate: Must match the sender device (e.g. ESP32).
 
 7. Output:
-- Prints predicted gesture in real-time:
+- Prints predicted gestures in real-time:
 ```
 Current Gesture: sitting_nodding_up_down
 ```
@@ -220,3 +220,9 @@ Current Gesture: sitting_nodding_up_down
     <img src="svm_confusion matrix.png" alt="Gesture Data Visualization" width="400"/>
   </div>
 </div>
+
+- Here, it mistakes 30% of sitting_still as sitting_nodding_side_to_side.
+- Observation: The model was trained with the first 70 text files and tested with the last 30 text files. When I trained it with 70 random files and tested it with 30 random files which were all unused, I got 100% model accuracy.
+
+- Confusion Matrix for Knn Model:
+
