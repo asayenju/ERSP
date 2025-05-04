@@ -225,4 +225,16 @@ Current Gesture: sitting_nodding_up_down
 - Observation: The model was trained with the first 70 text files and tested with the last 30 text files. When I trained it with 70 random files and tested it with 30 random files which were all unused, I got 100% model accuracy.
 
 - Confusion Matrix for Knn Model:
+  <div align="center" style="margin: 20px 0;">
+  <div>
+    <img src="figure_1.png" alt="Gesture Data Visualization" width="400"/>
+  </div>
+</div>
 
+- Here, KNN is more accurate as it mistakes 7 text files of sitting_still as sitting_nodding_side_to_side.
+- Observation: Same observation with SVM, training with 70 random files and testing it with 30 random files will get me 100% model accuracy.
+
+### Future Works:
+## 1. Machine Learning for Actual Fatigue Classification:
+- Collect Data for different types of motion while cycling normally
+- Collect 
