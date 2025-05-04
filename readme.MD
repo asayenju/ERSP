@@ -227,7 +227,7 @@ Current Gesture: sitting_nodding_up_down
 - Confusion Matrix for Knn Model:
   <div align="center" style="margin: 20px 0;">
   <div>
-    <img src="figure_1.png" alt="Gesture Data Visualization" width="400"/>
+    <img src="Figure_1.png" alt="Gesture Data Visualization" width="400"/>
   </div>
 </div>
 
