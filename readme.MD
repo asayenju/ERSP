@@ -39,4 +39,17 @@
 4. Installation is probably the hardest part so make sure to do it multiple times
 
 ## Step 3:
-1. paste the code from 
+1. Open the folder of your device
+2. Download the correct version bundle from here https://circuitpython.org/libraries
+3. Paste the lib folder from this bundle to your device
+4. Paste the code from the ESP32 code directory in this repo into a new file called code.py which you can create
+
+## Step 4 (Optional):
+1. To test this you can use Putty to test if it is passing the data so you can download the software here: https://www.putty.org/
+2. After installing putty change the connection type to serial
+3. Go to the device manager to see what port the device is connected to (i.e COM17)
+4. Write your serial line in putty as the port and press open
+5. You can see huge lines of acceleration and gyroscope data (different dimensions) in the form of ax, ay, az, gx, gy, gz
+6. Play around with the imu to see if the data changes if you move the device in different motions
+
+
