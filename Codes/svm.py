@@ -100,7 +100,7 @@ print(np.std(X_train, axis=0))
 # Train SVM model
 model = SVC(kernel='rbf')
 model.fit(X_train, y_train)
-with open('model.pkl', 'wb') as file:
+with open('model.pk1', 'wb') as file:
     pickle.dump(model, file)
 # Predict
 y_pred = model.predict(X_test)
