@@ -92,6 +92,24 @@ pip install -r requirements.txt
     - Splits data into 70% training & 30% testing per class.
     - Returns X_train, X_test, y_train, y_test.
 
+2. Dataset Analysis:
+- Prints dataset shapes (e.g., Train set -> Features: (280, 12), Labels: (280,)).
+- Checks class distribution (ensures balanced data).
+- Computes feature statistics (mean & std dev).
 
+3. Model Training (SVM):
+- Uses Radial Basis Function (RBF) kernel (SVC(kernel='rbf')).
+- Fits the model on X_train, y_train.
 
+4. Evaluation:
+- Accuracy: Computes test accuracy (e.g., Model Accuracy: 95.00%).
+- Classification Report:
+  - Shows precision, recall, F1-score per class.
+- Confusion Matrix:
+  - Visualizes true vs. predicted labels.
+- Uses seaborn for an annotated heatmap with large fonts.
+
+5. Output
+- Displays confusion matrix (plt.show()).
+- Helps assess model performance on different gestures.
 
