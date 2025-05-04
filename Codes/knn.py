@@ -130,27 +130,8 @@ for k in k_values:
     knn_temp.fit(X_train_scaled, y_train)
     accuracies.append(knn_temp.score(X_test_scaled, y_test))
 
-# Plot learning curves
-train_sizes, train_scores, test_scores = learning_curve(
-    knn_model, X_train, y_train, cv=5, n_jobs=-1,
-    train_sizes=np.linspace(0.1, 1.0, 5))
+
 
 joblib.dump(knn_model, "knn_model.pk1")
-joblib.dump(scaler, "knn_scaler.pkl")  # This is the new line you need to add
-plt.figure(figsize=(10, 6))
-plt.plot(train_sizes, np.mean(train_scores, axis=1), label='Training score')
-plt.plot(train_sizes, np.mean(test_scores, axis=1), label='Cross-validation score')
-plt.xlabel("Training examples")
-plt.ylabel("Accuracy")
-plt.legend()
-plt.title("Learning Curves")
-plt.show()
+joblib.dump(scaler, "knn_scaler.pk1")  # This is the new line you need to add
 
-plt.figure(figsize=(10, 6))
-plt.plot(k_values, accuracies, marker='o')
-plt.title('Finding Optimal k Value')
-plt.xlabel('Number of Neighbors (k)')
-plt.ylabel('Accuracy')
-plt.xticks(k_values)
-plt.grid()
-plt.show()
