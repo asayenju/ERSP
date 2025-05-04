@@ -17,7 +17,7 @@
 ## Methods and Methodology:
 - We used a ESP32-S3-DevKitC-1-N32R8 device as our microcontroller and connected it to an imu (MPU6050) that tracks acceleration and gyroscope
 ### Steps to set up the ESP32 device with circuit python:
-<div align="center" style="display: flex; justify-content: space-around;">
+<div align="center" style="display: flex; justify-content: space-between;">
   <div style="margin: 10px; ">
     <strong>ESP32-S3-DevKitC</strong><br>
     <img src="https://circuitpython.org/assets/images/boards/large/espressif_esp32s3_devkitc_1.jpg" alt="ESP32 Board" width="250"/>
