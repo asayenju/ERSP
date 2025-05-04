@@ -109,7 +109,7 @@ pip install -r requirements.txt
   - Visualizes true vs. predicted labels.
 - Uses seaborn for an annotated heatmap with large fonts.
 
-5. Output
+5. Output:
 - Displays confusion matrix (plt.show()).
 - Helps assess model performance on different gestures.
 
